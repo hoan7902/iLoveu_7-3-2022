@@ -1,0 +1,37 @@
+/* PC */
+@media (min-width: 1024px){
+
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px){
+    .box-tks{
+        margin: auto auto;
+    }
+}
+
+/* Mobile */
+@media (max-width: 740px){
+    .box{
+        width: 100%;
+    }
+    .box-tks{
+        margin: auto auto;
+    }
+    .box-tks__text{
+        font-size: 12px;
+    }
+    .box-vid__video{
+        height: 100px;
+        width: 100px;
+    }
+    .sentToMe__text{
+        font-size: 12px;
+    }
+
+    .vidBox{
+        /* flex-direction: columnm !important; */
+        padding: 40px 50px;
+        align-items: center;
+    }
+}

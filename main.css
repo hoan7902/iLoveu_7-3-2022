@@ -1,0 +1,271 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Main CSS */
+
+.audio{
+    display:none;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    background-image: url('https://previews.123rf.com/images/neyro2008/neyro20081701/neyro2008170100149/69874066-red-hearts-seamless-pattern-vector-love-repeat-texture-background-silhouette-heart-illustration.jpg');
+}
+
+.container-heart{
+    position: relative;
+    margin: auto;
+    animation: purseColor 2s ease-in-out;
+    /* display: none; */
+}
+
+.audio{
+    position: absolute;
+    top: -152px;
+    left: -620px;
+}
+
+.heart{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(238, 11, 151, 0.952);
+    transform: rotate(-45deg);
+    animation: heartMove 1s infinite;
+}
+
+.heart::before, .heart::after{
+    position: absolute;
+    border-radius: 50%;
+    content: "";
+    width: 200px;
+    height: 200px;
+    background-color: rgba(238, 11, 151, 0.952);
+    animation: heartMove 1s infinite;
+}
+
+.heart::before{
+    top: -100px;
+}
+
+.heart::after{
+    right: -100px;
+}
+
+.right-eye{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #000;
+    border-radius: 50%;
+    right: 53px;
+    top: -24px;
+    /* animation: blink 1s infinite; */
+}
+
+.left-eye{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #000;
+    border-radius: 50%;
+    left: 206px;
+    top: 53px;
+    z-index: 1;
+}
+
+.mout{
+    position: absolute;
+    height: 15px;
+    width: 80px;
+    background-color: #000;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    top: 62px;
+    right: 33px;
+    z-index: 1;
+}
+
+.heart:hover{
+    cursor: pointer;
+}
+
+.box{
+    position: absolute;
+    background-color: rgba(31, 19, 199, 0.8);
+    min-height: 30px;
+    display: flex;
+    top: 246px;
+    min-width: 500px;
+    border-radius: 5px;
+    padding: 15px 0;
+    transform: translateX(-25%);
+}
+
+.box:hover{
+    opacity: 0.95;
+    cursor: pointer;
+}
+
+.box__text{
+    margin: auto;
+    /* color: rgb(50, 13, 214); */
+    color: #fff;
+    opacity: 0.9;
+    font-size: 22px;
+    text-align: center;
+}
+
+.overleaf{
+    display: none;
+    position: fixed;
+    z-index: 5;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    animation: smoothy 1s ease;
+}
+
+.open{
+    display: block !important;
+}
+
+.openFlex{
+    display: flex !important;
+}
+
+.box-tks{
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: justify;
+    margin: auto 439px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    background: url('/img-and-vid/IMG_4607 2.jpg');
+    background-size: 100% 100%;
+}
+
+.box-tks__text{
+    margin: auto auto 0 auto;
+    font-size: 23px;
+    line-height: 1.6;
+    font-style: italic;
+    color: #fff;
+    text-shadow: 0 0 0 #000;
+}
+
+/* .box-container-vid{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+} */
+
+.box-vid{
+    display: inline-block;
+}
+
+.box-vid__video{
+    height: 200px;
+    width: 200px;
+}
+
+.aniver{
+    display: flex;
+    border-radius: 5px;
+    margin: 0 150px;
+    /* background-color: rgba(226, 241, 6, 0.4); */
+}
+
+.aniver__text{
+    margin: 20px auto;
+    /* margin-top: 45px; */
+    font-weight: bold;
+    text-decoration: none;
+    color: pink;
+    display: inline-block;
+    /* padding: 10px 40px 10px 40px; */
+    padding: 10px;
+    position: relative;
+    border: 3px solid pink;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.aniver__text:hover{
+    cursor: pointer;
+}
+
+.vidContainer{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 4;
+    animation: scale 1s ease;
+}
+
+.vidBox{
+    margin: auto;
+    /* position: absolute; */
+    background-image: url('https://img4.thuthuatphanmem.vn/uploads/2020/03/07/background-8-3-don-gian-dep_011145050.jpg');
+    background-size: 100% 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 292px;
+    align-items: center;
+    /* justify-content: space-evenly; */
+}
+
+@keyframes heartMove {
+    from{
+        transform: scale(1.2s);
+        rotate: (-45deg);
+    }
+
+    to{
+        transform: scale(1);
+        rotate: (-45deg);
+    }
+}
+
+@-webkit-keyframes purseColor {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes smoothy {
+    from{
+        opacity: 0;
+        transform: translateY(-400px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scale {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7->8-3-2022</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <div class="container-heart js-button">
+        <!-- <audio id="player" autoplay loop>
+            <source src="/NuCuoi1820-DoanHieu-6330230.mp3">
+        </audio> -->
+        <iframe class="audio" loop width="560" height="315" src="https://www.youtube.com/embed/9EwqXZtviTM?rel=0&autoplay=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="heart">
+            <div class="right-eye"></div>
+            <div class="left-eye"></div>
+            <div class="mout"></div>
+        </div>
+        <div class="box">
+            <h3 class="box__text">Tặng Min iu dấu Trái Tym ngày 8-3 nè!!! <br> Em ấn vô trái tym nha</h3>
+        </div>
+    </div>
+ 
+    <!-- Thank you -->
+    <div class="overleaf js-overleaf">
+        <div class="box-tks js-box-tks">
+            <p class="box-tks__text js-button">
+                Đã qua ngày 7-3 và nay là 8-3 quốc tế phụ nữ rùi, được 2 năm em hun lên má anh rồi bỏ chạy lạch bạch rồi nè hehehe, nhân 2 dịp đặc biệt anh chúc em iu luôn luôn xinh gái, học giỏi và được nhiều người công nhận tài năng hơn! Mặc dù mình hay cãi nhau nhưng mà anh vẫn đang cố gắng thay đổi để em cảm thấy thoải mái hơn với anh, anh vẫn thương em như ngày đầu tiên vậy, yêu nhau thêm 2 năm và mãi mãi nhớ bạn cùng bàn. Cám ơn em vì đã giúp đỡ anh nhiều nhiều lắm. Chúc người phụ nữ tương lai của anh có 1 ngày 8-3 vui vẻ nhe!
+            </p>
+            <div class="aniver js-aniver">
+                <div class="aniver__text">Một vài kỷ niệm của chúng mình</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vid -->
+    <div class="vidContainer js-vidContainer">
+        <div class="vidBox js-vidBox">
+                <div class="box-vid">
+                    <video controls class="box-vid__video">
+                        <source src="/img-and-vid/vid1.mp4">
+                    </video>
+                </div>
+                <div class="box-vid">
+                    <video controls class="box-vid__video">
+                        <source src="/img-and-vid/vid2.mp4">
+                    </video>
+                </div>
+                <div class="box-vid">
+                    <video controls class="box-vid__video">
+                        <source src="/img-and-vid/vid3.mp4">
+                    </video>
+                </div>
+                <div class="box-vid">
+                    <video controls class="box-vid__video">
+                        <source src="/img-and-vid/vid4.mp4">
+                    </video>
+                </div>
+                <div class="box-vid">
+                    <video controls class="box-vid__video">
+                        <source src="/img-and-vid/vid5.mp4">
+                    </video>
+                </div>
+        </div>
+    </div>
+
+    <script>
+        const openBoxs = document.querySelectorAll('.js-button');
+        const pickBackground = document.querySelector('.js-overleaf');
+        const pickBox = document.querySelector('.js-box-tks');
+        const openVid = document.querySelector('.js-aniver');
+        const pickVid__Small = document.querySelector('.js-vidBox')
+
+        const pickVid = document.querySelector('.js-vidContainer');
+
+        function showBox(){
+            pickBackground.classList.add('open');
+        }
+
+        function showVid(){
+            pickVid.classList.add('openFlex');
+        }
+
+        function hideVid(){
+            pickVid.classList.remove('openFlex');
+        }
+
+        function hideBox(){
+            pickBackground.classList.remove('open');
+        }
+
+        for (const openBox of openBoxs){
+            openBox.addEventListener('click', showBox);
+        }
+
+        openVid.addEventListener('click', showVid);
+        openVid.addEventListener('click', hideBox);
+
+        pickBackground.addEventListener('click', hideBox);
+        pickVid.addEventListener('click', hideVid);
+        pickVid__Small.addEventListener('click', function(event){
+            event.stopPropagation();
+        })
+        pickBox.addEventListener('click', function(event){
+            event.stopPropagation();
+        })
+    </script>
+</body>
+</html>
